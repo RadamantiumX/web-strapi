@@ -1,0 +1,11 @@
+### Comprobando la Authenticación, obtenemos la imagen con el "populate=cover" como query
+GET http://localhost:1337/api/home?populate=cover
+Authorization: Bearer 1b70a2a828b406b2c57db44f06e3ba3a3ae9a4ff79b33ffdaffb0ea47ee886c1f198d8c0f607460e0d9915e5b69d080317b8cd1465b2c264c993e75132ccb56790d2cb7880ef2b5900744eaacd026f24e730e5bcb43f5b3f207aa2ce9cc97f9f7079919b711f979eb49bd9942720837bb062d32c6f0c95f0b36f64a793ef0722
+
+### New Request for categories. Podemos pedir algunos campos que necesitemos
+GET http://localhost:1337/api/product-categories?fields[0]=name&fields[1]=slug&fields[2]=description&populate[image][fields][0]=url
+Authorization: Bearer 1b70a2a828b406b2c57db44f06e3ba3a3ae9a4ff79b33ffdaffb0ea47ee886c1f198d8c0f607460e0d9915e5b69d080317b8cd1465b2c264c993e75132ccb56790d2cb7880ef2b5900744eaacd026f24e730e5bcb43f5b3f207aa2ce9cc97f9f7079919b711f979eb49bd9942720837bb062d32c6f0c95f0b36f64a793ef0722
+
+### Pedimos los productos ubicados en la categoria "shirts". Podemos filtar por categorias.
+GET http://localhost:1337/api/products?filters[product_category][slug][$contains]=stickers
+Authorization: Bearer 1b70a2a828b406b2c57db44f06e3ba3a3ae9a4ff79b33ffdaffb0ea47ee886c1f198d8c0f607460e0d9915e5b69d080317b8cd1465b2c264c993e75132ccb56790d2cb7880ef2b5900744eaacd026f24e730e5bcb43f5b3f207aa2ce9cc97f9f7079919b711f979eb49bd9942720837bb062d32c6f0c95f0b36f64a793ef0722
