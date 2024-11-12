@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ Start Strapi in watch mode. (Changes in Strapi project files will trigger a server restart)
+         ```bash
+          npm run develop
 
-## Getting Started
+          Start Strapi without watch mode.
+          npm run start
 
-First, run the development server:
+          Build Strapi admin panel.
+          npm run build
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+          Deploy Strapi project.
+          npm run deploy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+          Seed your database with sample data.
+          npm run seed:example
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+          Display all available commands.
+          npm run strapi
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+          To get started run
 
-## Learn More
+          cd C:\Users\eduar\Desktop\git-projects\strapi\backend
+          npm run develop
+          ```
 
-To learn more about Next.js, take a look at the following resources:
+          Account : epsiweb.developers@gmail.com       
+          Password: same
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Al crear las colecciones, siempre lo hacemos en singular.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![alt text](image.png)
 
-## Deploy on Vercel
+# Strapi Interfaz
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Content Type Builder: En esta sección creamos los diferentos tipos de componentes (o colecciones) que queremos que se renderizen.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Content Manager: En esta sección modificamos esos diferentes componentes segun cual seleccionemos.
+
+Para la localización, solo le tenemos que pasar el siguiente valor al parametro de la URL.
+
+"locale=es" --> En este caso, seleccionamos el idioma "Español".
+
+NOTA: Primero tenemos que configurar la LOCALIZACION en el **next.config.ts**.
